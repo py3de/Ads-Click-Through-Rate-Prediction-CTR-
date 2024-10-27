@@ -30,7 +30,7 @@ Click-Through Rate (CTR) is a critical metric in digital marketing, reflecting t
 3. Python 3.7+ with dependencies installed (see Installation below).
 
 ## Installation
-1. Check install.sh
+1. Check install.sh file:
 2. Run the following command in your terminal to make install.sh executable:
    ```bash
    chmod +x install.sh
@@ -42,8 +42,36 @@ Click-Through Rate (CTR) is a critical metric in digital marketing, reflecting t
 1. Authenticate: Ensure your Pinterest Business account has access to the Ads API and that you have requested the appropriate permissions.
 2. Define Parameters: Set the time frame, campaign IDs, and metrics you wish to retrieve.
 3. Run Data Collection:
-   Execute the data collection script to fetch ad data:
+   - **Execute the data collection script to fetch ad data. The collected data will be saved locally in a structured format (e.g., CSV or DataFrame) for further processing.
    ```bash
    python data_collection.py
 
-   
+## Usage
+1. Prepare Data:
+   - **Run the data preprocessing script:
+     ```bash
+     python preprocess_data.py
+2. Train the Model:
+   - **Train the CTR prediction model:
+   ```bash
+   python train_model.py
+3. Predict CTR:
+   - **Use the prediction script to forecast CTR for new campaigns:
+   ```bash
+   python predict_ctr.py --input your_campaign_data.csv
+
+## Model Overview
+- **Input Features: Impressions, clicks, engagement rate, frequency, spend, and other relevant metrics.
+- **Algorithm: The model utilizes regression techniques (e.g., Random Forest, Gradient Boosting) to predict CTR.
+- **Evaluation Metrics: Mean Squared Error (MSE) and Mean Absolute Error (MAE) evaluate model performance.
+
+## Results and Performance
+- **Average CTR prediction error: X%.
+- **Tested on historical data, with an MAE of Y%.
+- **Detailed results are available in the results directory.
+
+## Privacy Policy
+This project respects privacy and ensures responsible data handling. See our Privacy Policy for details on data usage and security.
+
+## Contributing
+We welcome contributions! If you have suggestions for improvements or want to add features, please submit a pull request or open an issue.
