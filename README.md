@@ -1,4 +1,4 @@
-# CTR Prediction Model for Pinterest Ads Campaigns
+**## CTR Prediction Model for Pinterest Ads Campaigns**
 
 This repository provides a **Click-Through Rate (CTR) Prediction Model** designed to optimize and analyze Pinterest ad campaigns. Utilizing Pinterest's Ads API, this model predicts CTR based on historical ad data, enabling data-driven strategies for better ad performance.
 
@@ -19,10 +19,10 @@ This repository provides a **Click-Through Rate (CTR) Prediction Model** designe
 Click-Through Rate (CTR) is a critical metric in digital marketing, reflecting the percentage of ad impressions that lead to clicks. This model leverages machine learning to predict CTR, helping businesses make data-driven decisions to enhance targeting and ad content.
 
 ## Features
-- **Predictive CTR Modeling**: Forecasts CTR using data on impressions, clicks, engagement rates, and other metrics.
-- **Automated Data Collection**: Collects ad performance metrics automatically through the Pinterest Ads API.
-- **Scalability and Efficiency**: Handles large datasets efficiently with optimized code.
-- **Customizable and Tunable**: Easily adjust the model to meet different campaign objectives.
+- Predictive CTR Modeling**: Forecasts CTR using data on impressions, clicks, engagement rates, and other metrics.
+- Automated Data Collection**: Collects ad performance metrics automatically through the Pinterest Ads API.
+- Scalability and Efficiency**: Handles large datasets efficiently with optimized code.
+- Customizable and Tunable**: Easily adjust the model to meet different campaign objectives.
 
 ## Prerequisites
 1. A **Pinterest Business Account** with **developer access** to the Ads API.
@@ -61,14 +61,14 @@ Click-Through Rate (CTR) is a critical metric in digital marketing, reflecting t
    python predict_ctr.py --input your_campaign_data.csv
 
 ## Model Overview
-- **Input Features: Impressions, clicks, engagement rate, frequency, spend, and other relevant metrics.
-- **Algorithm: The model utilizes regression techniques (e.g., Random Forest, Gradient Boosting) to predict CTR.
-- **Evaluation Metrics: Mean Squared Error (MSE) and Mean Absolute Error (MAE) evaluate model performance.
+- Input Features: Impressions, clicks, engagement rate, frequency, spend, and other relevant metrics.
+- Algorithm: The model utilizes regression techniques (e.g., Random Forest, Gradient Boosting) to predict CTR.
+- Evaluation Metrics: Mean Squared Error (MSE) and Mean Absolute Error (MAE) evaluate model performance.
 
 ## Results and Performance
-- **Average CTR prediction error: X%.
-- **Tested on historical data, with an MAE of Y%.
-- **Detailed results are available in the results directory.
+- Average CTR prediction error: X%.
+- Tested on historical data, with an MAE of Y%.
+- Detailed results are available in the results directory.
 
 ## Privacy Policy
 This project respects privacy and ensures responsible data handling. See our Privacy Policy for details on data usage and security.
