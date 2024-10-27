@@ -1,0 +1,9 @@
+# Basic dependencies
+python-dotenv   # For loading environment variables from the .env file
+requests        # For making API requests to Pinterest
+pandas          # For data handling and processing
+scikit-learn    # For machine learning model development
+
+# Additional libraries (if needed for your project)
+numpy           # For numerical operations
+matplotlib      # For visualizing results
