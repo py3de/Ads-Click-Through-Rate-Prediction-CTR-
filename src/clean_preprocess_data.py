@@ -1,6 +1,6 @@
 import pandas as pd
 
-# Load the synthetic data (replace with the actual CSV file path)
+# To load the data for cleaning, make sure the .csv file is located in the same directory as this one
 df = pd.read_csv('Pinterest_ads_data.csv')
 
 # Step 1: Check for missing values
