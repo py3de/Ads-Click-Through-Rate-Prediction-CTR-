@@ -44,7 +44,7 @@ Click-Through Rate (CTR) is a critical metric in digital marketing, reflecting t
 3. Run Data Collection:
    - Execute the data collection script to fetch ad data. The collected data will be saved locally in a structured format (e.g., CSV or DataFrame) for further processing.
    ```bash
-   python data_collection.py
+   python fetch_data.py
 
 ## Usage
 1. Prepare Data:
