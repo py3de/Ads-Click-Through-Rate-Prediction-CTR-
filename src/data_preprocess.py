@@ -43,6 +43,6 @@ df = df[(df['ctr'] >= (Q1 - 1.5 * IQR)) & (df['ctr'] <= (Q3 + 1.5 * IQR))]
 print("\nCleaned Data Preview:\n", df.head())
 
 # Step 7: Save the cleaned data
-df.to_csv('cleaned_pinterest_ads_data.csv', index=False)
-print("\nCleaned data saved as 'cleaned_pinterest_ads_data.csv'.")
+df.to_csv('processed_data.csv', index=False)
+print("\nCleaned data saved as 'processed_data.csv'.")
 

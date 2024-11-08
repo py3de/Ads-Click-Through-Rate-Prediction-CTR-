@@ -4,7 +4,7 @@ import pandas as pd
 from datetime import datetime
 
 # Configuration - Replace these with your actual credentials
-ACCESS_TOKEN = 'pina_AMA4Z7IWABOBMBAAGAADGCU6WNXQFEYBQBIQDNWGUSEFPOINT32TPWPK6AVTTNJCTIMMW6THGRHAKENIKHECVNXVWC7PH3AA'  # Your Access Token
+ACCESS_TOKEN = 'pina_AMA4Z7IWABOBMBAAGAADGCWXZWJQZEYBQBIQDGX4WEM7C44DXTDU4GSXSLZO2CX2VNOCM3Z42YNOSTXRZ34I2XHNLR4K55YA'  # Your Access Token
 AD_ACCOUNT_ID = '549768385136'  # Your Ad Account ID
 BASE_URL = 'https://api.pinterest.com/v5/ad_accounts'  # Base URL for Pinterest API
 ENDPOINT = f'{BASE_URL}/{AD_ACCOUNT_ID}/ads'  # Full endpoint for fetching ads data
