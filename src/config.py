@@ -6,8 +6,11 @@ AD_ACCOUNT_ID = 'your_ad_account_id_here'  # Pinterest ad account ID
 BASE_URL = 'https://api.pinterest.com/v5/ad_accounts'  # Pinterest API base URL
 
 # Data Settings
-SYNTHETIC_DATA_PATH = 'src/pinterest_ads_data.csv'  # Actual Pinterest fetched data
-CLEANED_DATA_PATH = 'src/processed_data.csv'  # Cleaned data file path
+DATA_PATH={
+'fetched_data':'pinterest_ads_data.csv',
+'processed_data':'processed_data.csv',
+'evaluation_data': 'evaluation_data.csv',
+}
 
 # Model Parameters
 MODEL_SAVE_PATH = 'models/ctr_prediction_model.pkl'  # Where to save the trained model
