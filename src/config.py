@@ -9,7 +9,7 @@ BASE_URL = 'https://api.pinterest.com/v5/ad_accounts'  # Pinterest API base URL
 DATA_PATH={
 'fetched_data':'pinterest_ads_data.csv',
 'processed_data':'processed_data.csv',
-'evaluation_data': 'evaluation_data.csv',
+'evaluation_data': 'evaluation_data.csv', #optional
 }
 
 # Model Parameters
