@@ -5,10 +5,10 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error
 import joblib
 import os
-from config import DATA_PATH  # assuming config.py contains paths and settings
+from config import DATA_PATH
 
 def load_data():
-    # Load data
+    
     data = pd.read_csv(DATA_PATH['processed_data'])  # Adjust as per your config
 
     # Drop or convert non-numeric columns
@@ -19,20 +19,21 @@ def load_data():
     if 'date' in data.columns:
         data.drop(columns=['date'], inplace=True)
     if 'ad_id' in data.columns:
-        data.drop(columns=['ad_id'], inplace=True)  # Drop the ad_id column
+        data.drop(columns=['ad_id'], inplace=True)
 
     # Replace 'click' with the actual column name that you want to predict
-    X = data.drop(columns=['clicks'])  # Drop features column, assuming 'clicks' is the target
-    y = data['clicks']  # The target column
+    X = data.drop(columns=['clicks'])
 
     return train_test_split(X, y, test_size=0.2, random_state=42)
 
+
+# Training using XGBRegressor
 def train_xgboost(X_train, y_train, X_test, y_test):
     xgb_model = XGBRegressor(
         n_estimators=1000,
         learning_rate=0.05,
         early_stopping_rounds=50,
-        eval_metric="rmse"  # Root Mean Square Error, suitable for regression
+        eval_metric="rmse"  # Root Mean Square Error
     )
     
     xgb_model.fit(
@@ -40,6 +41,13 @@ def train_xgboost(X_train, y_train, X_test, y_test):
         eval_set=[(X_test, y_test)],
         verbose=True
     )
+    
+    #save the model
+    model_dir = 'models'
+    os.makedirs(model_dir, exist_ok=True)
+
+    model_path = os.path.join(model_dir, 'xgb_model.joblib')
+    joblib.dump(xgb_model, model_path)
     return xgb_model
 
 
@@ -68,7 +76,6 @@ def train_lightgbm(X_train, y_train, X_test, y_test):
     model_dir = 'models'
     os.makedirs(model_dir, exist_ok=True)  # Create the directory if it doesn't exist
 
-    # Save the trained model
     model_path = os.path.join(model_dir, 'lgb_model.joblib')
     joblib.dump(lgb_model, model_path)
 
