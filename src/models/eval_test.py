@@ -32,14 +32,14 @@ def evaluate_model(model, X_test, y_test, model_name="Model"):
     predictions = model.predict(X_test) # Predictions
     
     
-    mae = mean_absolute_error(y_test, predictions)
-    mse = mean_squared_error(y_test, predictions)
-    rmse = mean_squared_error(y_test, predictions, squared=False)
+    mAE = mean_absolute_error(y_test, predictions)
+    mSE = mean_squared_error(y_test, predictions)
+    rmSE = mean_squared_error(y_test, predictions, squared=False)
     
     print(f"\nEvaluation for {model_name}:")
-    print(f"  Mean Absolute Error (MAE): {mae:.4f}")
-    print(f"  Mean Squared Error (MSE): {mse:.4f}")
-    print(f"  Root Mean Squared Error (RMSE): {rmse:.4f}")
+    print(f"  Mean Absolute Error (MAE): {mAE:.4f}")
+    print(f"  Mean Squared Error (MSE): {mSE:.4f}")
+    print(f"  Root Mean Squared Error (RMSE): {rmSE:.4f}")
     print("-" * 50)
 
 
