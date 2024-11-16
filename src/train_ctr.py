@@ -23,6 +23,7 @@ def load_data():
 
     # Replace 'click' with the actual column name that you want to predict
     X = data.drop(columns=['clicks'])
+    y = data['clicks']
 
     return train_test_split(X, y, test_size=0.2, random_state=42)
 
@@ -94,16 +95,6 @@ def main():
     lgb_model = train_lightgbm(X_train, y_train, X_test, y_test)
     print("LightGBM training completed.")
     
-    # Evaluate both models using RMSE (Root Mean Squared Error)
-    xgb_preds = xgb_model.predict(X_test)
-    lgb_preds = lgb_model.predict(X_test)
-    
-    # Calculate RMSE for both models
-    xgb_rmse = mean_squared_error(y_test, xgb_preds, squared=False)
-    lgb_rmse = mean_squared_error(y_test, lgb_preds, squared=False)
-    
-    print("XGBoost RMSE:", xgb_rmse)
-    print("LightGBM RMSE:", lgb_rmse)
 
 if __name__ == "__main__":
     main()
