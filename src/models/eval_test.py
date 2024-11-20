@@ -52,12 +52,15 @@ def evaluate_model_with_residuals(model, X_test, y_test, model_name="Model"):
     plt.grid(True)
     plt.show()
 
-# Simulate test data (Replace with actual test data)
-X_test = np.random.rand(20, 4)  # Replace with your actual test features
-y_test = np.random.rand(20) * 1000  # Replace with your actual test labels
+
+# Replace with your test features and labels
+X_test = np.random.rand(20, 4)
+y_test = np.random.rand(20) * 1000
+
 
 # Load models
 lgb_model, xgb_model = load_models()
+
 
 # Evaluate models and plot residuals
 evaluate_model_with_residuals(lgb_model, X_test, y_test, model_name="LightGBM")
