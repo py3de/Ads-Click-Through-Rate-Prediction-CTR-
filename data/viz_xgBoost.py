@@ -44,8 +44,8 @@ def plot_learning_curve(model, X_train, y_train, X_val, y_val, title):
         model.fit(
             X_train_subset, 
             y_train_subset,
-            #eval_metric="rmse",
-            #early_stopping_rounds=10,
+            eval_metric="rmse",
+            early_stopping_rounds=10,
             eval_set=[(X_val, y_val)],
             verbose=True
         )
